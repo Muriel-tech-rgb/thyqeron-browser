@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#080d18"><meta name="description" content="THYQERON CORE — painel pessoal futurista">
+<link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icons/icon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css">
+<title>THYQERON CORE</title>
+</head>
+<body>
+<div class="ambient a1"></div><div class="ambient a2"></div>
+<main class="shell">
+<header class="topbar"><a class="brand" href="#"><span class="brand-mark">T</span><span><strong>THYQERON</strong><small>CORE SYSTEMS · 01</small></span></a><button id="themeButton" class="icon-button" aria-label="Alternar tema">◐</button></header>
+<section class="hero panel"><div class="eyebrow"><i class="pulse"></i> SISTEMA OPERACIONAL PESSOAL</div><div class="hero-grid"><div><p id="dateLine" class="date-line">CARREGANDO DATA...</p><div id="clock" class="clock">00:00<span>:00</span></div><p class="hero-sub">Seu espaço. Seu controle.</p></div><div class="orb" aria-hidden="true"><div class="ring ra"></div><div class="ring rb"></div><div class="orb-center">T<span>+</span></div></div></div><div class="status-line"><span>● INTERFACE ATIVA</span><span id="onlineStatus">VERIFICANDO CONEXÃO</span></div></section>
+<section class="section-head"><div><p class="eyebrow">CENTRAL DE CONTROLE</p><h2>Painel rápido</h2></div><span class="section-index">01 / 04</span></section>
+<section class="tiles">
+<button class="tile" data-action="notes"><span class="tile-icon">▤</span><b>Notas</b><span class="tile-desc">Ideias guardadas no dispositivo</span><span class="arrow">↗</span></button>
+<button class="tile" data-action="timer"><span class="tile-icon">◷</span><b>Foco</b><span class="tile-desc">Temporizador de concentração</span><span class="arrow">↗</span></button>
+<button class="tile" data-action="shortcuts"><span class="tile-icon">⌘</span><b>Atalhos</b><span class="tile-desc">Acessos úteis</span><span class="arrow">↗</span></button>
+<button class="tile" data-action="system"><span class="tile-icon">◈</span><b>Sistema</b><span class="tile-desc">Informações do navegador</span><span class="arrow">↗</span></button>
+</section>
+<section class="section-head"><div><p class="eyebrow">FERRAMENTAS</p><h2>Área de trabalho</h2></div><span class="section-index">02 / 04</span></section>
+<section class="panel workspace"><div class="workspace-top"><div><span class="mini-label">ANOTAÇÃO RÁPIDA</span><h3>Bloco local</h3></div><span class="save-state" id="saveState">SALVO LOCALMENTE</span></div><textarea id="notePad" rows="5" placeholder="Escreva uma ideia, plano ou lembrete..."></textarea><div class="workspace-bottom"><span>Seus textos ficam neste navegador.</span><button id="clearNotes" class="text-button">Limpar notas</button></div></section>
+<section class="tool-grid"><article class="panel tool-panel" id="timerPanel"><div class="panel-heading"><span class="tile-icon small">◷</span><div><span class="mini-label">MODO FOCO</span><h3>Temporizador</h3></div></div><div id="timerDisplay" class="timer-display">25:00</div><div class="timer-controls"><button id="startTimer" class="primary-button">Iniciar</button><button id="resetTimer" class="secondary-button">Reiniciar</button></div><p class="muted tiny">Sessão padrão de 25 minutos.</p></article>
+<article class="panel tool-panel" id="shortcutsPanel"><div class="panel-heading"><span class="tile-icon small">⌘</span><div><span class="mini-label">ACESSO RÁPIDO</span><h3>Links úteis</h3></div></div><a class="shortcut" href="https://www.google.com" target="_blank" rel="noopener"><span>Google</span><span>↗</span></a><a class="shortcut" href="https://www.youtube.com" target="_blank" rel="noopener"><span>YouTube</span><span>↗</span></a><a class="shortcut" href="https://www.wikipedia.org" target="_blank" rel="noopener"><span>Wikipedia</span><span>↗</span></a><button id="addShortcut" class="text-button">+ Adicionar link</button></article></section>
+<section class="panel system-panel" id="systemPanel"><div class="workspace-top"><div><span class="mini-label">DIAGNÓSTICO</span><h3>Estado do ambiente</h3></div><span class="system-symbol">◈</span></div><div class="system-row"><span>Navegador</span><strong id="browserName">Detectando...</strong></div><div class="system-row"><span>Conexão</span><strong id="connectionType">Detectando...</strong></div><div class="system-row"><span>Modo de instalação</span><strong id="installMode">Navegador</strong></div><p class="muted tiny">Por segurança, páginas web não conseguem ler livremente a RAM, armazenamento ou bateria do Android. Isso é uma limitação do navegador.</p></section>
+<footer><span class="brand-footer">THYQERON <b>CORE</b></span><span>BUILD 1.0.0 · FEITO PARA VOCÊ</span></footer>
+</main>
+<dialog id="modal"><form method="dialog" class="modal-card"><button class="modal-close" aria-label="Fechar">×</button><p class="eyebrow" id="modalEyebrow">THYQERON TOOL</p><h2 id="modalTitle">Ferramenta</h2><div id="modalBody"></div><div class="modal-actions"><button class="secondary-button" value="cancel">Fechar</button><button id="modalAction" class="primary-button" value="confirm">Confirmar</button></div></form></dialog><div id="toast" class="toast" role="status"></div>
+<script src="app.js"></script>
+</body></html>
